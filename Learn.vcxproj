@@ -82,7 +82,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>./lib/SDL/win32</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>./inc</AdditionalIncludeDirectories>
@@ -104,10 +104,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\Constants.h" />
+    <ClInclude Include="inc\Game.h" />
     <ClInclude Include="inc\main.h" />
     <ClInclude Include="inc\resource.h" />
     <ClInclude Include="inc\sdl\begin_code.h" />
@@ -194,6 +198,7 @@
     <ClInclude Include="inc\sdl\SDL_vulkan.h" />
     <ClInclude Include="inc\stdafx.h" />
     <ClInclude Include="inc\targetver.h" />
+    <ClInclude Include="inc\Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="data\Learn.rc" />
